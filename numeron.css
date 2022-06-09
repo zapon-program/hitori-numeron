@@ -1,0 +1,61 @@
+*,*::before,*::after{box-sizing:border-box}*{margin:0}html,body{height:100%}body{line-height:1.5;-webkit-font-smoothing:antialiased}img,picture,video,canvas,svg{display:block;max-width:100%}input,button,textarea,select{font:inherit}p,h1,h2,h3,h4,h5,h6{overflow-wrap:break-word}#root,#__next{isolation:isolate}
+
+body{
+    margin:50px 100px;
+}
+
+h1{
+    margin-bottom:30px;
+}
+
+#container{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    height: 50px;
+}
+.hover{
+    cursor: pointer;
+}
+select{
+    width: 70px;
+    height: 50px;
+    text-align: center;
+    font-size: 1.5em;
+}
+input{
+    border-radius: 5%;
+    text-align: center;
+    padding: 10px 15px;
+    background: ;
+    color: ;
+    transition: .2s;
+    box-shadow: 3px 3px 1.5px;
+    margin-left: 15px;
+}
+input:hover{
+    box-shadow: none;
+    color: ;
+    background: ;
+}
+#answer{
+    font-size: 1.5em;
+    margin-left: 10px;
+    line-height: 50px;
+}
+table{
+    width: 100%;
+}
+tbody tr{
+    height: 50px;
+    text-align: center;
+    font-size: 1.5em;
+}
+.fig{
+    width: 15%;
+}
+table{
+    border: solid;
+    border-collapse: collapse;
+}
