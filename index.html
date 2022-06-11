@@ -6,72 +6,78 @@
     <script src="numeron.js"></script>
 </head>
 <body>
-    <h1>ひとりぬめろん</h1>
-    <h2>ルール説明</h2>
-    <p>
-        コンピューターが用意した4ケタの数字を当てるゲームです。用意される数字は、同じ数字が2つ以上使用された数字(1122や8876のような数字)はありません。<br>
-        0～9の数字を4つ選択してください。数字と桁が合っている場合は「EAT」、数字は合っているが桁が違う場合は「BITE」と言います。<br>
-        例）正解の数字が1234のとき、1346と入力したとします。<br>
-        数字も桁もあっているのは千の位の1の一つなので、1EATとなります。<br>
-        数字は合っているが桁が違うのは3と4の二つなので、2BITEとなります。<br>
-        以上より、画面右側に「1EAT 2BITE」と表示されます。
-    </p>
-    <div id="container">
-        <form action="#" name="numbers">
-            <select name="" id="num1" class="hover">
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-            </select>
-            <select name="" id="num2" class="hover">
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-            </select>
-            <select name="" id="num3" class="hover">
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-            </select>
-            <select name="" id="num4" class="hover">
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-            </select>
-        </form>
-        <input type="submit" value="確定" onclick="clickBtn1()" class="hover">
-        <input type="submit" value="答え" onclick="clickBtn2()" class="hover">
-        <p id="answer"></p>
-    </div>
-    <table border="solid">
+    <header>
+        <h1>ひとりぬめろん</h1>
+        <button onclick="rule()" class="hover" id="rule">遊び方</button>
+        <div id="rule_container">
+            <h2>遊び方</h2>
+            <button onclick="del()" id="del">閉じる</button>
+            <p>
+                コンピューターが用意した4ケタの数字を当てるゲームです。用意される数字は、0~9の中から1回ずつ4つ選ばれます。<br>
+                0～9の数字を4つ選択し、確定ボタンを押してください。数字と位が合っている場合は「EAT」、数字は合っているが位が違う場合は「BITE」となります。<br>
+                EATとBITEの数が表のそれぞれの部分に表示されます。この情報を基に、コンピューターが用意した数字を推理してください。<br>
+                例）正解の数字が1234のとき、1346と入力したとします。<br>
+                数字も桁もあっているのは千の位の1の一つなので、1EATとなり、EATの欄に1と表示されます。<br>
+                数字は合っているが桁が違うのは3と4の二つなので、2BITEとなり、BITEの欄に2と表示されます。<br>
+            </p>
+        </div>
+        <div id="container">
+            <form action="#" name="numbers">
+                <select name="" id="num1" class="hover">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select>
+                <select name="" id="num2" class="hover">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select>
+                <select name="" id="num3" class="hover">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select>
+                <select name="" id="num4" class="hover">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select>
+            </form>
+            <button onclick="clickBtn1()" class="hover">確定</button>
+            <button onclick="clickBtn2()" class="hover">答え</button>
+            <p id="answer"></p>
+        </div>
+    </header>
+    <table>
         <thead>
             <tr>
                 <th class="fig">counter</th>
