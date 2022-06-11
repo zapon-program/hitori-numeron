@@ -130,6 +130,9 @@ function clickBtn1(){
 //答え表示
 function clickBtn2() {
     if(window.confirm('答えを表示します。よろしいですか？')){
-        document.getElementById('answer').textContent = answer1 * 1000 + answer2 * 100 + answer3 * 10 + answer4
+        document.getElementById('aspan1').textContent = answer1;
+        document.getElementById('aspan2').textContent = answer2;
+        document.getElementById('aspan3').textContent = answer3;
+        document.getElementById('aspan4').textContent = answer4;
     }
 }

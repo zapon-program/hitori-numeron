@@ -3,6 +3,7 @@
 <head>
     <title>ひとりぬめろん</title>
     <link rel="stylesheet" href="numeron.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="numeron.js"></script>
 </head>
 <body>
@@ -74,13 +75,13 @@
             </form>
             <button onclick="clickBtn1()" class="hover">確定</button>
             <button onclick="clickBtn2()" class="hover">答え</button>
-            <p id="answer"></p>
+            <p id="answer"><span id="aspan1"></span><span id="aspan2"></span><span id="aspan3"></span><span id="aspan4"></span></p>
         </div>
     </header>
     <table>
         <thead>
             <tr>
-                <th class="fig">counter</th>
+                <th class="fig">count</th>
                 <th id="select">selectnumber</th>
                 <th class="fig">EAT</th>
                 <th class="fig">BITE</th>

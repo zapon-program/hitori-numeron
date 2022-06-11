@@ -20,6 +20,7 @@ header{
 }
 #rule_container{
     position: absolute;
+    z-index: 200;
     display: none;
     background-color: azure;
     padding: 2% 5%;
@@ -60,15 +61,15 @@ button{
     border-radius: 5%;
     text-align: center;
     padding: 10px 15px;
-    background: ;
-    color: ;
+    /* background: ;
+    color: ; */
     transition: .2s;
     box-shadow: 3px 3px 1.5px;
     margin-left: 15px;
 }
 button:hover{
     box-shadow: none;
-    color: ;
+    /* color: ; */
     background: white;
 }
 #answer{
@@ -92,4 +93,71 @@ table,td,th{
     border-collapse: collapse;
     position: relative;
     top: 20%;
+}
+@media screen and (max-width: 500px) {
+    *{
+        font-size: 0.5em;
+    }
+    h1{
+        font-size: 7em;
+    }
+    body{
+        margin: 5% 7%;
+    }
+    header{
+        height: 60px;
+        padding: 10px;
+    }
+    #rule{
+        top: 10px;
+        right: 5px;
+    }
+    #rule_container{
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    h2{
+        margin: 5px;
+    }
+    button{
+        width: 27px;
+        height: 20px;
+        margin: 0 3px 0 0;
+        top: -10%;
+        padding: 0;
+    }
+    button{
+        box-shadow: 1px 1px 0.7px;
+    }
+    button:hover{
+        box-shadow: 1px 1px 0.7px;
+        /* color: ; */
+        background: none;
+    }    
+    #del{
+        top: 5px;
+        right: 5px;
+    }
+    #answer{
+        margin: 0;
+        line-height: normal;
+    }
+    #container{
+        margin: 0;
+    }
+    form{
+        width: 50%;
+        height: 50%;
+    }
+    select{
+        width: 20%;
+        height: 20px;
+    }
+    table{
+        top: 60px;
+    }
+    tbody tr{
+        height: auto;
+    }
 }
