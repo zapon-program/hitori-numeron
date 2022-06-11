@@ -108,13 +108,14 @@ table,td,th{
         margin: 5% 7%;
     }
     header{
-        height: 80px;
+        height: 120px;
         padding: 10px;
     }
     #rule{
         top: 10px;
         right: 5px;
-        width: 40px;
+        width: 60px;
+        margin-top: 0;
     }
     #rule_container{
         width: 100%;
@@ -125,15 +126,12 @@ table,td,th{
         margin: 5px;
     }
     button{
-        width: 27px;
+        width: 50px;
         height: 30px;
-        margin: 0 3px 0 0;
-        top: -10%;
+        margin: 10px 3px 0 21px;
+        top: 10px;
         padding: 0;
-    }
-    button{
         box-shadow: 1px 1px 0.7px;
-        font-size: initial;
     }
     button:hover{
         box-shadow: 1px 1px 0.7px;
@@ -146,22 +144,22 @@ table,td,th{
     }
     #answer{
         margin: 0;
-        line-height: normal;
+        line-height: -1;
     }
     #container{
         margin: 0;
+        flex-wrap: wrap;
     }
     form{
-        width: 60%;
+        width: 100%;
         height: 50%;
     }
     select{
         width: 20%;
         height: 30px;
-        font-size: initial;
     }
     table{
-        top: 70px;
+        top: 115px;
     }
     tbody tr{
         height: auto;
