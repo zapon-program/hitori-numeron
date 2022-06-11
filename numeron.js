@@ -1,5 +1,15 @@
 'use strict'
 
+//遊び方
+function rule(){
+    let rule_element = document.getElementById('rule_container');
+    rule_element.style.display = 'inline';
+}
+function del(){
+    let rule_element = document.getElementById('rule_container');
+    rule_element.style.display = 'none';
+}
+
 //正解
 var answer1 = Math.floor(Math.random()*10);
 var answer2 = Math.floor(Math.random()*10);
